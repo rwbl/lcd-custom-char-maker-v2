@@ -1,0 +1,139 @@
+object FormCharImport: TFormCharImport
+  Left = 779
+  Height = 300
+  Top = 227
+  Width = 500
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
+  Caption = 'Custom Char Import'
+  ClientHeight = 300
+  ClientWidth = 500
+  DesignTimePPI = 120
+  OnCloseQuery = FormCloseQuery
+  Position = poDesktopCenter
+  LCLVersion = '2.0.12.0'
+  object PanelBottom: TPanel
+    Left = 0
+    Height = 35
+    Top = 265
+    Width = 500
+    Align = alBottom
+    ClientHeight = 35
+    ClientWidth = 500
+    TabOrder = 0
+    object ButtonImport: TButton
+      Left = 417
+      Height = 29
+      Top = 3
+      Width = 80
+      Action = ActionImport
+      Align = alRight
+      BorderSpacing.Left = 2
+      BorderSpacing.Top = 2
+      BorderSpacing.Right = 2
+      BorderSpacing.Bottom = 2
+      ModalResult = 1
+      TabOrder = 0
+    end
+    object ButtonCancel: TButton
+      Left = 335
+      Height = 29
+      Top = 3
+      Width = 80
+      Action = ActionCancel
+      Align = alRight
+      BorderSpacing.Left = 2
+      BorderSpacing.Top = 2
+      BorderSpacing.Right = 2
+      BorderSpacing.Bottom = 2
+      ModalResult = 2
+      TabOrder = 1
+    end
+    object ComboBoxCustomCharFormat: TComboBox
+      Left = 3
+      Height = 28
+      Hint = 'Select custom char import format BIN, HEX or DEC.'
+      Top = 3
+      Width = 80
+      Align = alLeft
+      BorderSpacing.Left = 2
+      BorderSpacing.Top = 2
+      BorderSpacing.Bottom = 2
+      ItemHeight = 20
+      ItemIndex = 0
+      Items.Strings = (
+        'BIN'
+        'HEX'
+        'DEC'
+      )
+      TabOrder = 2
+      Text = 'BIN'
+    end
+    object ButtonClear: TButton
+      Left = 85
+      Height = 29
+      Top = 3
+      Width = 80
+      Action = ActionClear
+      Align = alLeft
+      BorderSpacing.Left = 2
+      BorderSpacing.Top = 2
+      BorderSpacing.Right = 2
+      BorderSpacing.Bottom = 2
+      TabOrder = 3
+    end
+    object ButtonPaste: TButton
+      Left = 167
+      Height = 29
+      Top = 3
+      Width = 80
+      Action = ActionPaste
+      Align = alLeft
+      BorderSpacing.Left = 2
+      BorderSpacing.Top = 2
+      BorderSpacing.Right = 2
+      BorderSpacing.Bottom = 2
+      TabOrder = 4
+    end
+  end
+  object MemoCustomCharPixels: TMemo
+    Left = 0
+    Height = 265
+    Hint = 'Define the custom char pixels.'
+    Top = 0
+    Width = 500
+    Align = alClient
+    Lines.Strings = (
+      ''
+    )
+    TabOrder = 1
+  end
+  object ActionListCharImport: TActionList
+    Left = 307
+    Top = 32
+    object ActionImport: TAction
+      Category = 'General'
+      Caption = 'Import'
+      Hint = 'Import the custom char pattern. Ensure to select the right pattern.'
+      OnExecute = ActionImportExecute
+    end
+    object ActionCancel: TAction
+      Category = 'General'
+      Caption = 'Cancel'
+      Hint = 'Close the dialog without import.'
+      OnExecute = ActionCancelExecute
+    end
+    object ActionClear: TAction
+      Category = 'General'
+      Caption = 'Clear'
+      Hint = 'Clear the custom char pattern.'
+      OnExecute = ActionClearExecute
+    end
+    object ActionPaste: TAction
+      Category = 'General'
+      Caption = 'Paste'
+      Hint = 'Paste custom char format from the clipboard.'
+      OnExecute = ActionPasteExecute
+    end
+  end
+end
