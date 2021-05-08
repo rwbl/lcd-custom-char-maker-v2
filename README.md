@@ -1,6 +1,10 @@
 # lcd-custom-char-maker-v2
 Create Custom Characters for LCD displays connected to Arduino, Raspberry Pi, Tinkerforge or other.
 
+![lcdccm-1](https://user-images.githubusercontent.com/47274144/117532599-a165aa00-afe8-11eb-8164-95c7b5842a36.png)
+
+![lcdccm-2](https://user-images.githubusercontent.com/47274144/117532601-a1fe4080-afe8-11eb-94ee-9d7584510617.png)
+
 ## Functionality
 * Create custom LCD character with 5 pixel horizontal (cols), 8 pixel vertical (rows).
 * Each row is represented by a byte with 5 bits.
